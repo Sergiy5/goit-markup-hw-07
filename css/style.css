@@ -1,20 +1,20 @@
 /*Кастомні змінні*/
 :root {
-    --primary-text-color: #212121;
-    --second-color: #757575;
-    --title-text-color: #000000;
-    --accent-color: #2196F3;
-    --background-color: #F5F5F5;
-    --icon-color: #AFB1B8;
+    $primary-text-color: #212121;
+    $second-color: #757575;
+    $title-text-color: #000000;
+    $accent-color: #2196F3;
+    $background-color: #F5F5F5;
+    $icon-color: #AFB1B8;
+    $letter-spacing: $letter-spacing;
 }
 
 body {
     font-family: "Roboto", sans-serif;
     font-style: normal;
-    background-color: var(--background-color);
-    color: var(--primary-text-color);
-    letter-spacing: 0.03em;
-    
+    background-color: var($background-color);
+    color: var($primary-text-color);
+    letter-spacing: $letter-spacing;
 }
 
 .link {
@@ -61,7 +61,7 @@ ul{
 
 /*Logo*/
 
-.header__logo {
+.logo {
     margin-left: 0;
     margin-right: 93px;
     font-family: 'Raleway';
@@ -69,11 +69,11 @@ ul{
     font-size: 26px;
     line-height: 1, 2;
     text-decoration: none;
-    color: inherit;
+    color: var($accent-color);
 }
 
-.header__color--logo {
-    color: var(--accent-color);
+.header__half-logo {
+    color: #000000;
 }
 
 /*Navigation*/
@@ -82,7 +82,7 @@ ul{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    width: 305px;
+    width: 286px;
     list-style: none;
     padding: 93px;
     margin: 0;
@@ -105,12 +105,12 @@ ul{
 
 .nav__link:hover,
 .nav__link:focus {
-    color: var(--accent-color);
+    color: var($accent-color);
 }
 
 .nav__link--current {
     position: relative;
-    color: var(--accent-color);
+    color: var($accent-color);
 }
 
 .nav__link--current::after {
@@ -149,7 +149,7 @@ ul{
     font-size: 14px;
     line-height: 1,14;
     letter-spacing: 0.02em;
-    color: var(--second-color);
+    color: var($second-color);
 
     transition-property: color;
     transition-duration: 250ms;
@@ -157,14 +157,14 @@ ul{
 }
 .header-contacts__link:hover,
 .header-contacts__link:focus {
-    color: var(--accent-color);
+    color: var($accent-color);
 }
 
 .header-contacts__icon {   
     vertical-align: middle; 
     margin-right: 8px;
     background-repeat: no-repeat;  
-    fill: var(--second-color);
+    fill: var($second-color);
 
     transition-property: fill;
     transition-duration: 250ms;
@@ -173,7 +173,7 @@ ul{
 
 .header-contacts__link:hover .header-contacts__icon,
 .header-contacts__link:focus .header-contacts__icon {
-    fill: var(--accent-color);
+    fill: var($accent-color);
 }
 
 
@@ -222,7 +222,7 @@ ul{
     border-radius: 4px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background: var(--accent-color);
+    background: var($accent-color);
     color: #FFFFFF;
 }
 
@@ -275,7 +275,7 @@ ul{
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    color: var(--primary-text-color);
+    color: var($primary-text-color);
 }
 
 .featurs__text {
@@ -283,7 +283,7 @@ ul{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
-    color: var(--second-color);
+    color: var($second-color);
 }
 
 .featurs__box {
@@ -392,7 +392,7 @@ ul{
 
 .about__text {
     margin-top: 10px;
-    color: var(--second-color);
+    color: var($second-color);
 }
 
 .about__item {
@@ -415,13 +415,12 @@ ul{
     margin-top: 16px;
     margin-bottom: 30px;
     padding: 0;
-    width: 200px;
+    width: 206px;
 }
 
 .social-list__item {
     display: flex;
     margin: 0;
-    
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -445,7 +444,7 @@ ul{
     width: 20px;
     height: 20px;
     padding-bottom: -3px;
-    fill: var(--icon-color);
+    fill: var($icon-color);
 
     transition-property: fill;
     transition-duration: 250ms;
@@ -454,7 +453,7 @@ ul{
 
 .social-list__link:hover,
 .social-list__link:focus {
-    background-color: var(--accent-color);
+    background-color: var($accent-color);
 }
 
 .social-list__link:hover .social-list__icon,
@@ -505,7 +504,7 @@ ul{
 }
 
 .clients__icon {
-    fill: var(--second-color);
+    fill: var($second-color);
 
     transition-property: fill, ;
     transition-duration: 250ms;
@@ -514,57 +513,46 @@ ul{
 
 .clients__link:hover .clients__icon,
 .clients__link:focus .clients__icon {
-    fill: var(--accent-color);
-    border: var(--accent-color);
+    fill: var($accent-color);
+    border: var($accent-color);
 }
 
 .clients__link:hover,
 .clients__link:focus {
-    border-color: var(--accent-color);
+    border-color: var($accent-color);
 }
 
 /*Footer*/
 
 .footer {
-    display: inline-block;
-    text-align: center;
+    
     width: 1600px;
     height: 252px;
     background: #2F303A;
 }
-.footer__container {
-    margin-left: auto;
-    margin-right: auto;
+.footer__list {
     display: flex;
-    text-align: center;
-    width: 1170px;
+    justify-content: center;
+    list-style: none;
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .footer__contacts {
     display: inline-block;
+    margin-top: 75px;
     width: 231px;
     text-align: start;
 }
 
 /*LOGO*/
 
-.footer__logo { 
-    display: inline-block;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1, 2;
-    text-decoration: none;
+.footer__half-logo {
     color: #FFFFFF;
 }
 
-.footer__color-logo {
-    color: var(--accent-color);
-}
-
-.footer__list {
+.footer__contacts-list {
     display: inline-flex;
     align-items: flex-start;
     flex-direction: column;
@@ -574,11 +562,12 @@ ul{
     height: 81px;
 }
 
-.footer__item:not(:first-child) {
+.footer__contacts-item:not(:first-child) {
     margin-top: 9px;
 }
 
 .footer__address {
+    margin-top: 20px;
     font-family: inherit;
     font-style: normal;
     font-size: 14px;
@@ -597,18 +586,9 @@ ul{
     color: rgba(255, 255, 255, 0.6);
 }
 
-/*
-.footer .container {
-    display: flex;
-    justify-content: start;
-}*/
-
 .footer-icons {
-    margin-top: 72px;
-}
-.social-list--footer {
+    margin-top: 87px;
     margin-left: 70px;
-    width: 206px;
 }
 
 .footer-icons__title {
@@ -617,6 +597,9 @@ ul{
     font-size: 14px;
     line-height: 1.2;
     color: #FFFFFF;
+}
+.foote__rsocial-list {
+    width: 206px;
 }
 
 .social-list__icon--footer{
@@ -632,14 +615,14 @@ ul{
 }
 
 .social-list__link:hover {
-    background-color: var(--accent-color);
+    background-color: var($accent-color);
 }
 
 /*SUBSCRIBE FORM*/
 
 .subscrib {
     display: inline-block;
-    margin-top: 72px;
+    margin-top: 87px;
     margin-left: 93px;
     width: 570px;
     height: 86px;
@@ -673,7 +656,7 @@ ul{
     font-size: 16px;
     line-height: calc(20/16);
     align-items: center;
-    letter-spacing: 0.03em;
+    letter-spacing: $letter-spacing;
     color: #FFFFFF;
     background: #2F303A;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -687,13 +670,14 @@ ul{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-sizing: border-box;
     margin-left: 12px;
     width: 200px;
     height: 50px;
     color: #FFFFFF;
-    background-color: var(--accent-color);
+    background-color: var($accent-color);
     border-radius: 4px;
-    border: none;
+    border-color: var($accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition-property: background-color;
@@ -710,7 +694,7 @@ ul{
     height: 24px;
     background-image: url('../images/send.svg');
 }
-.subscrib__:focus {
+.subscrib__button:focus {
     background-color: #188CE8;
 }
 
@@ -721,37 +705,34 @@ ul{
 
 /*Buttons portfolio*/
 
-.filter-list {
+.filter__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
     margin-top: 94px;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 575px;
+    list-style: none;
+
 
 }
 
-.filter-li:not(:last-child) {
-    margin-right: 8px;
-}
-
-.filter-list .all {
+.filter__item .all {
     padding: 6px 25px;
 }
 
-.filter-btn {
+.filter__btn {
     box-sizing: border-box;
     padding: 6px 22px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
-    letter-spacing: 0.03em;
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
-    color: var(----primary-text-color);
+    color: var(--$primary-text-color);
     border: none;
     background: #F5F4FA;
 
@@ -760,10 +741,10 @@ ul{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
+.filter__btn:hover,
+.filter__btn:focus {
     color: #FFFFFF;
-    background-color: var(--accent-color);
+    background-color: var($accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -771,7 +752,7 @@ ul{
 
 /*Projects*/
 
-.project-list {
+.card__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -779,55 +760,57 @@ ul{
     margin-top: 50px;
     margin-bottom: 94px;
     padding: 0;
+    list-style: none;
 }
 
-.card-portfolio {
+.card__item {
     max-height: 404px;
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
     border: none;
 }
 
-.project-link {
+.card__link {
     display: inline-block;
     text-align: start;
+    text-decoration: none;
     height: 404px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover,
-.project-link:focus {
+.project__link:hover,
+.project__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-title {
+.card__title {
     margin-top: 18px;
     margin-left: 24px;
     font-family: inherit;
     font-size: 18px;
     line-height: calc(36/18);
     letter-spacing: 0.06em;
-    color: var(--primary-text-color);
+    color: var($primary-text-color);
 }
 
-.project-text {
+.card__text {
     margin-top: 4px;
     margin-left: 24px;
     margin-bottom: 20px;
     font-size: 16px;
     line-height: calc(30/16);
-    color: var(--second-color);
+    color: var($second-color);
 }
 
-.overlay {
+.card__overlay {
     height: 294px;
     position: relative;
     overflow: hidden;
 }
 
-.hover-overlay {
+.card__hover-overlay {
     display: inline-block;
     position: absolute;
     top: 1px;
@@ -842,11 +825,11 @@ ul{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover .hover-overlay {
+.card__link:hover .card__hover-overlay {
     transform: translate(0);
 }
 
-.text-overlay {
+.card__text-overlay {
     padding: 63px 24px;
     font-size: 18px;
     line-height: 1.5;
@@ -924,14 +907,14 @@ ul{
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
-    fill: var(----primary-text-color);
+    fill: var(--$primary-text-color);
 
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon:hover {
-    fill: var(--accent-color);
+    fill: var($accent-color);
 }
 
  /*FORM FIELDS*/
@@ -953,7 +936,7 @@ ul{
     font-size: 20px;
     line-height: calc(23/20);
     text-align: center;
-    letter-spacing: 0.03em;
+    letter-spacing: $letter-spacing;
     color: #212121;
  }
 
@@ -985,7 +968,7 @@ ul{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
  .form-input:focus {
-    outline: 1px solid var(--accent-color);
+    outline: 1px solid var($accent-color);
  }
  .form-label {
     position: absolute;
@@ -1003,14 +986,14 @@ ul{
     top: 11px;
     width: 18px;
     height: 18px;
-    fill: var(----primary-text-color);
+    fill: var(--$primary-text-color);
 
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus ~ .form-icon {
-    fill: var(--accent-color);
+    fill: var($accent-color);
 }
 /*
  background-color: rgba(33, 150, 243, 0.9);
@@ -1041,7 +1024,7 @@ ul{
  .checkbox-link {
     font-size: 14px;
     line-height: calc(24/14);
-    letter-spacing: 0.03em;
+    letter-spacing: $letter-spacing;
     color: #757575;
 }
 .form-checkbox {
@@ -1052,7 +1035,7 @@ ul{
 }
 .checkbox-link {
     white-space: pre;
-    color: var(--accent-color);
+    color: var($accent-color);
 }
 .check-icon {
     display: inline-block;
@@ -1067,7 +1050,7 @@ ul{
     background-image: url('../images/check.svg');
     background-size: contain;
     background-origin: border-box;
-    border-color: var(--accent-color);
+    border-color: var($accent-color);
 }
 .sub-button {
     display: block;
@@ -1082,7 +1065,7 @@ ul{
     width: 200px;
     height: 50px;
     color: #FFFFFF;
-    background-color: var(--accent-color);
+    background-color: var($accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
