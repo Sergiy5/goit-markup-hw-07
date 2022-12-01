@@ -34,7 +34,7 @@ ul {
   margin: 0 auto;
   width: 1600px;
   height: auto;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .header {
@@ -354,7 +354,7 @@ ul {
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .about {
@@ -406,7 +406,7 @@ ul {
 .about__item {
   width: 270px;
   height: auto;
-  background: #FFFFFF;
+  background: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -585,7 +585,7 @@ ul {
 }
 
 .footer__half-logo {
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .footer__contacts-list {
@@ -616,7 +616,7 @@ ul {
   font-size: 14px;
   line-height: 1.7142857143;
   letter-spacing: inherit;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .footer__contacts-link {
@@ -639,7 +639,7 @@ ul {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .foote__rsocial-list {
@@ -647,7 +647,7 @@ ul {
 }
 
 .social-list__icon--footer {
-  fill: #FFFFFF;
+  fill: #fff;
 }
 
 .social-list__link {
@@ -681,7 +681,7 @@ ul {
   margin-bottom: 20px;
   line-height: 1.1428571429;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .subscrib__field {
@@ -711,7 +711,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.03em;
-  color: #FFFFFF;
+  color: #fff;
   background: #2F303A;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -737,7 +737,7 @@ ul {
   margin-left: 12px;
   width: 200px;
   height: 50px;
-  color: #FFFFFF;
+  color: #fff;
   background-color: #2196F3;
   border-radius: 4px;
   border-color: #2196F3;

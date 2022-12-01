@@ -38,6 +38,17 @@
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover .clients__icon,
+        &:focus .clients__icon {
+            fill: $accent-color;
+            border: $accent-color;
+        }
+    
+        &:hover,
+        &:focus {
+            border-color: $accent-color;
+        }
 }
 
 .clients__icon {
@@ -46,15 +57,4 @@
     transition-property: fill, ;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
-    fill: $accent-color;
-    border: $accent-color;
-}
-
-.clients__link:hover,
-.clients__link:focus {
-    border-color: $accent-color;
 }

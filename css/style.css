@@ -1,20 +1,20 @@
 /*Кастомні змінні*/
 :root {
-    $primary-text-color: #212121;
-    $second-color: #757575;
-    $title-text-color: #000000;
-    $accent-color: #2196F3;
-    $background-color: #F5F5F5;
-    $icon-color: #AFB1B8;
-    $letter-spacing: $letter-spacing;
+    --primary-text-color: #212121;
+    --second-color: #757575;
+    --title-text-color: #000000;
+    --accent-color: #2196F3;
+    --background-color: #F5F5F5;
+    --icon-color: #AFB1B8;
+    --letter-spacing: --letter-spacing;
 }
 
 body {
     font-family: "Roboto", sans-serif;
     font-style: normal;
-    background-color: var($background-color);
-    color: var($primary-text-color);
-    letter-spacing: $letter-spacing;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    letter-spacing: var(--letter-spacing);
 }
 
 .link {
@@ -69,7 +69,7 @@ ul{
     font-size: 26px;
     line-height: 1, 2;
     text-decoration: none;
-    color: var($accent-color);
+    color: var(--accent-color);
 }
 
 .header__half-logo {
@@ -105,12 +105,12 @@ ul{
 
 .nav__link:hover,
 .nav__link:focus {
-    color: var($accent-color);
+    color: var(--accent-color);
 }
 
 .nav__link--current {
     position: relative;
-    color: var($accent-color);
+    color: var(--accent-color);
 }
 
 .nav__link--current::after {
@@ -149,7 +149,7 @@ ul{
     font-size: 14px;
     line-height: 1,14;
     letter-spacing: 0.02em;
-    color: var($second-color);
+    color: var(--second-color);
 
     transition-property: color;
     transition-duration: 250ms;
@@ -157,14 +157,14 @@ ul{
 }
 .header-contacts__link:hover,
 .header-contacts__link:focus {
-    color: var($accent-color);
+    color: var(--accent-color);
 }
 
 .header-contacts__icon {   
     vertical-align: middle; 
     margin-right: 8px;
     background-repeat: no-repeat;  
-    fill: var($second-color);
+    fill: var(--second-color);
 
     transition-property: fill;
     transition-duration: 250ms;
@@ -173,7 +173,7 @@ ul{
 
 .header-contacts__link:hover .header-contacts__icon,
 .header-contacts__link:focus .header-contacts__icon {
-    fill: var($accent-color);
+    fill: var(--accent-color);
 }
 
 
@@ -222,7 +222,7 @@ ul{
     border-radius: 4px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background: var($accent-color);
+    background: var(--accent-color);
     color: #FFFFFF;
 }
 
@@ -275,7 +275,7 @@ ul{
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    color: var($primary-text-color);
+    color: var(--primary-text-color);
 }
 
 .featurs__text {
@@ -283,7 +283,7 @@ ul{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
-    color: var($second-color);
+    color: var(--second-color);
 }
 
 .featurs__box {
@@ -392,7 +392,7 @@ ul{
 
 .about__text {
     margin-top: 10px;
-    color: var($second-color);
+    color: var(--second-color);
 }
 
 .about__item {
@@ -444,7 +444,7 @@ ul{
     width: 20px;
     height: 20px;
     padding-bottom: -3px;
-    fill: var($icon-color);
+    fill: var(--icon-color);
 
     transition-property: fill;
     transition-duration: 250ms;
@@ -453,7 +453,7 @@ ul{
 
 .social-list__link:hover,
 .social-list__link:focus {
-    background-color: var($accent-color);
+    background-color: var(--accent-color);
 }
 
 .social-list__link:hover .social-list__icon,
@@ -504,7 +504,7 @@ ul{
 }
 
 .clients__icon {
-    fill: var($second-color);
+    fill: var(--second-color);
 
     transition-property: fill, ;
     transition-duration: 250ms;
@@ -513,13 +513,13 @@ ul{
 
 .clients__link:hover .clients__icon,
 .clients__link:focus .clients__icon {
-    fill: var($accent-color);
-    border: var($accent-color);
+    fill: var(--accent-color);
+    border: var(--accent-color);
 }
 
 .clients__link:hover,
 .clients__link:focus {
-    border-color: var($accent-color);
+    border-color: var(--accent-color);
 }
 
 /*Footer*/
@@ -615,7 +615,7 @@ ul{
 }
 
 .social-list__link:hover {
-    background-color: var($accent-color);
+    background-color: var(--accent-color);
 }
 
 /*SUBSCRIBE FORM*/
@@ -656,7 +656,7 @@ ul{
     font-size: 16px;
     line-height: calc(20/16);
     align-items: center;
-    letter-spacing: $letter-spacing;
+    letter-spacing: --letter-spacing;
     color: #FFFFFF;
     background: #2F303A;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -675,9 +675,9 @@ ul{
     width: 200px;
     height: 50px;
     color: #FFFFFF;
-    background-color: var($accent-color);
+    background-color: var(--accent-color);
     border-radius: 4px;
-    border-color: var($accent-color);
+    border-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition-property: background-color;
@@ -732,7 +732,7 @@ ul{
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
-    color: var(--$primary-text-color);
+    color: var(----primary-text-color);
     border: none;
     background: #F5F4FA;
 
@@ -744,7 +744,7 @@ ul{
 .filter__btn:hover,
 .filter__btn:focus {
     color: #FFFFFF;
-    background-color: var($accent-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -792,7 +792,7 @@ ul{
     font-size: 18px;
     line-height: calc(36/18);
     letter-spacing: 0.06em;
-    color: var($primary-text-color);
+    color: var(--primary-text-color);
 }
 
 .card__text {
@@ -801,7 +801,7 @@ ul{
     margin-bottom: 20px;
     font-size: 16px;
     line-height: calc(30/16);
-    color: var($second-color);
+    color: var(--second-color);
 }
 
 .card__overlay {
@@ -907,14 +907,14 @@ ul{
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
-    fill: var(--$primary-text-color);
+    fill: var(----primary-text-color);
 
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon:hover {
-    fill: var($accent-color);
+    fill: var(--accent-color);
 }
 
  /*FORM FIELDS*/
@@ -936,7 +936,7 @@ ul{
     font-size: 20px;
     line-height: calc(23/20);
     text-align: center;
-    letter-spacing: $letter-spacing;
+    letter-spacing: --letter-spacing;
     color: #212121;
  }
 
@@ -968,7 +968,7 @@ ul{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
  .form-input:focus {
-    outline: 1px solid var($accent-color);
+    outline: 1px solid var(--accent-color);
  }
  .form-label {
     position: absolute;
@@ -986,14 +986,14 @@ ul{
     top: 11px;
     width: 18px;
     height: 18px;
-    fill: var(--$primary-text-color);
+    fill: var(----primary-text-color);
 
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus ~ .form-icon {
-    fill: var($accent-color);
+    fill: var(--accent-color);
 }
 /*
  background-color: rgba(33, 150, 243, 0.9);
@@ -1024,7 +1024,7 @@ ul{
  .checkbox-link {
     font-size: 14px;
     line-height: calc(24/14);
-    letter-spacing: $letter-spacing;
+    letter-spacing: --letter-spacing;
     color: #757575;
 }
 .form-checkbox {
@@ -1035,7 +1035,7 @@ ul{
 }
 .checkbox-link {
     white-space: pre;
-    color: var($accent-color);
+    color: var(--accent-color);
 }
 .check-icon {
     display: inline-block;
@@ -1050,7 +1050,7 @@ ul{
     background-image: url('../images/check.svg');
     background-size: contain;
     background-origin: border-box;
-    border-color: var($accent-color);
+    border-color: var(--accent-color);
 }
 .sub-button {
     display: block;
@@ -1065,7 +1065,7 @@ ul{
     width: 200px;
     height: 50px;
     color: #FFFFFF;
-    background-color: var($accent-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
