@@ -1,8 +1,9 @@
 @import "./utils/_vars.scss";
 @import "./base/modern-normalize";
 
+@import "./base/base.scss";
 @import "./components/_body.scss";
-@import "./components/_base.scss";
+
 @import "./components/_body.style.scss";
 
 @import "./components/_header.scss";
@@ -12,7 +13,7 @@
 
 @import "./components/_hero.scss";
 
-@import "./components/_featurs-title-hidden.scss";
+@import "./base/featurs-title-hidden";
 @import "./components/_featurs.scss";
 
 @import "./components/employment";
